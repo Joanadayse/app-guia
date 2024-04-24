@@ -1,3 +1,25 @@
+<style>
+  .container-text {
+  font-size: 16px;
+  padding: 32px;
+  margin-top: 13%;
+  color: #3c3c3c;
+  background-color: #ffffff;
+}
+.titulo {
+  display: -webkit-box;
+  margin-top: 30px;
+  color: white;
+  border-radius: 29px;
+  background-color: #c5c5c5;
+  font-size: small;
+}
+
+.titulo img {
+  width: 50px;
+}
+</style>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
@@ -7,12 +29,7 @@
 </ion-header>
 
 <ion-content>
-
- <ion-avatar></ion-avatar>
-
   <ion-card>
-    
-
     <ion-chip>
       <ion-avatar>
         <img src="../../assets/img/aviao.png" />
@@ -36,82 +53,297 @@
         <ion-icon name="thumbs-down-outline"></ion-icon>
       </ion-card-title>
 
-      <ion-button class="ion-text-wrap" style="max-width: 400px">
-        Pacote de viagem <br /> R$ 899,00
+      <ion-button
+        class="ion-text-wrap"
+        style="max-width: 400px"
+        
+        expand="block"
+        (click)="setOpen(true)"
+       
+      >
+        Pacote de viagem <br />
+        R$ 899,00
       </ion-button>
 
+     <ion-modal [isOpen]="isModalOpen" >
+        <ng-template>
+          <ion-content class="ion-padding">
+            <div class="titulo">
+              <ion-avatar>
+                <img src="../../assets/img/aviao.png" />
+              </ion-avatar>
+
+              <h4>Pacotes de viagem</h4>
+              
+            </div>
+
+            <div class="container-text">
+              <h4 style="text-align: center">Inclui:</h4>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Passagens aéreas;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Passeio para os pontos turísticos;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Hospedagem com 5 diárias;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Café da manha incluso;
+              </p>
+
+             
+            </div>
+
+            
+          
+
+           
+
+          
+          </ion-content> 
+          
+
+          <ion-footer>
+
+          
+
+              <ion-button 
+            id="present-alert"
+            expand="full"
+            size="small"
+            color="danger"
+            (click)="presentAlert()"
+            >Confirmar</ion-button> 
+            
+
+             <ion-button
+              expand="full"
+              size="small"
+              color="danger"
+              (click)="setOpen(false)"
+              >Voltar</ion-button
+            > 
+
+           
+
+           
+          </ion-footer> 
+        </ng-template>
+      </ion-modal> 
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+ <ion-card>
+    <ion-chip>
+      <ion-avatar>
+        <img src="../../assets/img/aviao.png" />
+      </ion-avatar>
+      <ion-label>Salvador -Bahia</ion-label>
+    </ion-chip>
 
-        <ion-chip>
-          <ion-avatar>
-            <img src="../../assets/img/aviao.png" />
-          </ion-avatar>
-          <ion-label>Salvador -Bahia</ion-label>
-        </ion-chip>
+    <img src="../../assets/img/salvador.jpg" />
 
-        <img src="../../assets/img/salvador.jpg" />
-
-        <ion-card-content>
-          <ion-card-title style="color: #d37d37"
-            >Municipio brasileiro</ion-card-title
-          >
-          <p style="color: #3c3c3c">
-            Salvador, a capital do estado da Bahia, é internacionalmente
-            reconhecida pela sua gastronomia, cultura e arquitetura. Além disso,
-            o lugar é marcado pela presença de culturas afro-brasileiras e pelo
-            seu alto valor turístico. A cidade pode ser um ótimo destino para as
-            suas férias ou para uma viagem em casal.
-          </p>
+    <ion-card-content>
+      <ion-card-title style="color: #d37d37"
+        >Municipio brasileiro</ion-card-title
+      >
+      <p style="color: #3c3c3c">
+        Salvador, a capital do estado da Bahia, é internacionalmente reconhecida
+        pela sua gastronomia, cultura e arquitetura. Além disso, o lugar é
+        marcado pela presença de culturas afro-brasileiras e pelo seu alto valor
+        turístico. A cidade pode ser um ótimo destino para as suas férias ou
+        para uma viagem em casal.
+      </p>
 
       <ion-card-title>
         <ion-icon name="thumbs-up-outline"></ion-icon>
         <ion-icon name="thumbs-down-outline"></ion-icon>
       </ion-card-title>
 
-      <ion-button class="ion-text-wrap" style="max-width: 400px">
+      <ion-button
+        class="ion-text-wrap"
+        style="max-width: 400px"
+        expand="block"
+        (click)="setOpen(true)"
+       
+      >
         Pacote de viagem <br />
         R$ 7.500,00
-      </ion-button>
+      </ion-button> 
 
-      </ion-card-content>
-     </ion-card>
+       <ion-modal [isOpen]="isModalOpen" >
+        <ng-template>
+          <ion-content class="ion-padding">
+            <div class="titulo">
+              <ion-avatar>
+                <img src="../../assets/img/aviao.png" />
+              </ion-avatar>
 
-      <ion-card>
-        <ion-chip>
-          <ion-avatar>
-            <img src="../../assets/img/aviao.png" />
-          </ion-avatar>
-          <ion-label>Serra Cearense</ion-label>
-        </ion-chip>
+              <h4>Pacotes de viagem</h4>
+            </div>
 
-        <img src="../../assets/img/chapada.jpg" />
+            <div class="container-text">
+              <h4 style="text-align: center">Inclui:</h4>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Passagens aéreas;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Passeio para os pontos turísticos;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Hospedagem com 5 diárias;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Café da manha incluso;
+              </p>
+              
+            </div>
+           
 
-        <ion-card-content style="text-align: center">
-          <ion-card-title style="color: #d37d37"> Ar puro </ion-card-title>
+         
 
-          <p style="color: #3c3c3c">
-            Combinação perfeita entre natureza, sabores e esportes radicais, a
-            Serra Cearense é sempre uma ótima opção de viagem. A mais ou menos
-            360 km de Fortaleza, a cidade de Viçosa do Ceará geralmente é a
-            porta de entrada para a região. Deixe as roupas de banho na bagagem
-            por um tempo: a temperatura gira em torno de 22°C. Ainda hoje são
-            vistos na arquitetura e na cultura do destino os traços das
-            colonizações francesa e portuguesa e a forte influência indígena.
-          </p>
+          
+          </ion-content>
 
-          <ion-card-title>
-            <ion-icon name="thumbs-up-outline"></ion-icon>
-            <ion-icon name="thumbs-down-outline"></ion-icon>
-          </ion-card-title>
+        
+          
 
-          <ion-button class="ion-text-wrap" style="max-width: 400px">
-            Pacote de viagem <br />
-            R$ 5.490,00
-          </ion-button>
-        </ion-card-content>
-      </ion-card>
-    
-  </ion-content>
+           <footer>
+            <ion-button 
+            id="present-alert"
+            expand="full"
+            size="small"
+            color="danger"
+            (click)="presentAlert()"
+           
+            >Confirmar</ion-button>
+            
+
+            <ion-button
+              expand="full"
+              size="small"
+              color="danger"
+              (click)="setOpen(false)"
+            
+              >Voltar
+</ion-button>
+           </footer>
+        </ng-template>
+      </ion-modal>
+     </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-chip>
+      <ion-avatar>
+        <img src="../../assets/img/aviao.png" />
+      </ion-avatar>
+      <ion-label>Serra Cearense</ion-label>
+    </ion-chip>
+
+    <img src="../../assets/img/chapada.jpg" />
+   
+
+    <ion-card-content style="text-align: center">
+      <ion-card-title style="color: #d37d37"> Ar puro </ion-card-title>
+
+      <p style="color: #3c3c3c">
+        Combinação perfeita entre natureza, sabores e esportes radicais, a Serra
+        Cearense é sempre uma ótima opção de viagem. A mais ou menos 360 km de
+        Fortaleza, a cidade de Viçosa do Ceará geralmente é a porta de entrada
+        para a região. Deixe as roupas de banho na bagagem por um tempo: a
+        temperatura gira em torno de 22°C. Ainda hoje são vistos na arquitetura
+        e na cultura do destino os traços das colonizações francesa e portuguesa
+        e a forte influência indígena.
+      </p>
+
+      <ion-card-title>
+        <ion-icon name="thumbs-up-outline"></ion-icon>
+        <ion-icon name="thumbs-down-outline"></ion-icon>
+      </ion-card-title>
+
+      <ion-button
+        class="ion-text-wrap"
+        style="max-width: 400px"
+        expand="block"
+        (click)="setOpen(true)"
+        
+      >
+        Pacote de viagem <br />
+        R$ 5.490,00
+      </ion-button> 
+
+     <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-content class="ion-padding">
+            <div class="titulo">
+              <ion-avatar>
+                <img src="../../assets/img/aviao.png" />
+              </ion-avatar>
+
+              <h4>Pacotes de viagem</h4>
+            </div>
+
+            <div class="container-text">
+              <h4 style="text-align: center">Inclui:</h4>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Passagens aéreas;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Passeio para os pontos turísticos;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Hospedagem com 5 diárias;
+              </p>
+              <p>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Café da manha incluso;
+              </p>
+             
+            </div>
+
+         
+         
+
+          
+          </ion-content>
+        
+          <ion-footer>
+              <ion-button 
+          id="present-alert"
+          expand="full"
+          size="small"
+          color="danger"
+          (click)="presentAlert()"
+          
+          >Confirmar</ion-button>
+          
+
+          
+           
+
+            <ion-button
+              expand="full"
+              size="small"
+              color="danger"
+               (click)="setOpen(false)"
+              >Voltar
+</ion-button>
+          </ion-footer>
+        </ng-template>
+      </ion-modal> 
+    </ion-card-content>
+  </ion-card>    
+</ion-content>
